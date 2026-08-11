@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0b0c10;
+  color: #f1f5f9;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Interest Chips Styling for Onboarding */
+.interest-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.125rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  background-color: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.interest-chip:hover {
+  background-color: rgba(51, 65, 85, 0.8);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.interest-chip:active {
+  transform: scale(0.97);
+}
+
+.interest-chip.selected {
+  background: linear-gradient(135deg, #7c3aed 0%, #e11d48 100%);
+  border-color: rgba(244, 63, 94, 0.6);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.35);
+  transform: scale(1.02);
+}
+
+.interest-chip.selected::after {
+  content: "✓";
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-left: 0.25rem;
+  opacity: 0.9;
+}
+
+/* Availability Classes */
+#username-availability.available {
+  color: #34d399;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#username-availability.available::before {
+  content: "✓ ";
+  font-weight: 700;
+}
+
+#username-availability.taken {
+  color: #f87171;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#username-availability.taken::before {
+  content: "✕ ";
+  font-weight: 700;
+}
+
+/* Glass Card & Atmosphere */
+.glass-panel {
+  background: rgba(18, 20, 29, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glow-ambient-violet {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.glow-ambient-rose {
+  background: radial-gradient(circle, rgba(225, 29, 72, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

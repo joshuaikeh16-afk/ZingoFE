@@ -1,0 +1,6 @@
+{
+  "name": "Kaidra Web",
+  "description": "Mobile-first anime and social app UI layouts with dark aesthetic, authentication, onboarding, and interactive DOM hooks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
